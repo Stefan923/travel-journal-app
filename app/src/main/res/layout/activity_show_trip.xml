@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.trip.ShowTripActivity">
+
+    <ImageView
+        android:id="@+id/pictureImageViewShow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_view_trip_picture_height"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/edit_trip_margin"
+        android:layout_marginTop="@dimen/edit_trip_margin"
+        android:layout_marginRight="@dimen/edit_trip_margin"
+        android:layout_marginBottom="@dimen/edit_trip_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pictureImageViewShow">
+
+        <EditText
+            android:id="@+id/nameEditTextShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_name"
+            android:enabled="false"
+            android:inputType="none" />
+
+        <EditText
+            android:id="@+id/destinationEditTextShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/destination"
+            android:enabled="false"
+            android:inputType="none" />
+
+        <RadioGroup
+            android:id="@+id/typeRadioGroupShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/typeRadioCityBreakShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_break"
+                android:textSize="@dimen/radio_button_text_size"
+                android:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/typeRadioSeaSideShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sea_side"
+                android:textSize="@dimen/radio_button_text_size"
+                android:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/typeRadioMountainsShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mountains"
+                android:textSize="@dimen/radio_button_text_size"
+                android:enabled="false" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/priceSeekBarShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="1000"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/priceTextViewShow"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/text_view_default_price"
+                android:textAlignment="textEnd" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/startDateEditTextShow"
+            android:layout_width="@dimen/date_picker_width"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="none" />
+
+        <EditText
+            android:id="@+id/endDateEditTextShow"
+            android:layout_width="@dimen/date_picker_width"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="none" />
+
+        <RatingBar
+            android:id="@+id/tripRatingBarShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="1"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/weatherTextViewShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text_go_back"
+        android:layout_marginStart="@dimen/edit_trip_margin"
+        android:layout_marginEnd="@dimen/edit_trip_margin"
+        android:layout_marginBottom="@dimen/edit_trip_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
